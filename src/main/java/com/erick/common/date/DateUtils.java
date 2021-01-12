@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * 时间工具类
- * @author : pangshaoshan
+ * @author : erick
  * @version : 1.0
  * @since 2019-10-13
  */
@@ -21,7 +21,7 @@ public class DateUtils {
      * 将String 转为Date型
      * @param date 字符串时间 yyyy-MM-dd
      * @return Date 将字符串类型转换为Date类型，时间格式要求 yyyy-MM-dd
-     * @author : pangshaoshan
+     * @author : erick
      * @since  : 2019-10-13
      */
     public static Date strToDateExactDay(String date){
@@ -32,7 +32,7 @@ public class DateUtils {
      * 带时分秒的String时间转为Date
      * @param date 字符串时间yyyy-MM-dd HH:mm:ss
      * @return 将字符串类型转换为Date类型，时间格式 yyyy-MM-dd HH:mm:ss
-     * @author : pangshaoshan
+     * @author : erick
      * @since : 2019-10-13
      */
     public static Date strToDateExactSec(String date){
@@ -44,7 +44,7 @@ public class DateUtils {
      * @param date 时间
      * @param dateFormat 转换格式
      * @return 将字符串类型转换为Date类型
-     * @author : pangshaoshan
+     * @author : erick
      * @since  : 2019-10-13
      */
     public static Date stringToDate(String date , String dateFormat){
@@ -66,7 +66,7 @@ public class DateUtils {
 
     /***
      * 获取当前年
-     * @author pangshaoshan
+     * @author erick
      * @return  当前年
      * @since 2019-10-13
      */
@@ -76,7 +76,7 @@ public class DateUtils {
 
     /***
      * 获取当前月
-     * @author pangshaoshan
+     * @author erick
      * @return  当前月
      * @since 2019-10-13
      */
@@ -86,7 +86,7 @@ public class DateUtils {
 
     /***
      * 获取当前天
-     * @author pangshaoshan
+     * @author erick
      * @return 当前天
      * @since  2019-10-13
      */
@@ -96,7 +96,7 @@ public class DateUtils {
 
     /***
      * 获取当前小时
-     * @author pangshaoshan
+     * @author erick
      * @return  当前小时
      * @since 2019-10-13
      */
@@ -106,7 +106,7 @@ public class DateUtils {
 
     /***
      * 获取当前时间精确到毫秒
-     * @author pangshaoshan
+     * @author erick
      * @return 获取当前时间，时间格式：yyyy-MM-dd HH:mm:ss:SSS
      * @since 2019-10-13
      */
@@ -116,7 +116,7 @@ public class DateUtils {
 
     /***
      * 获取当前时间
-     * @author pangshaoshan
+     * @author erick
      * @return 当前时间，时间格式：yyyy年MM月dd日
      * @since 2019-10-13
      */
@@ -126,7 +126,7 @@ public class DateUtils {
 
     /***
      * 获取当前时间
-     * @author  pangshaoshan
+     * @author  erick
      * @return 当前时间，时间格式： yyyy年MM月dd日 HH:mm:ss
      * @since 2019-10-15
      */
@@ -135,7 +135,7 @@ public class DateUtils {
     }
     /***
      * 获取当前时间
-     * @author pangshaoshan
+     * @author erick
      * @return 当前时间  yyyy-MM-dd
      * @since 2019-10-13
      */
@@ -145,7 +145,7 @@ public class DateUtils {
 
     /***
      * 获取当前时间
-     * @author pangshaoshan
+     * @author erick
      * @return 当前时间，时间格式： yyyy-MM-dd HH:mm:ss
      * @since 2019-10-13
      */
@@ -157,7 +157,7 @@ public class DateUtils {
      * 获取当前系统时间
      * @param dateFormat 时间格式
      * @return 当前时间，格式自定义
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-13
      */
     public static String getToday(String dateFormat){
@@ -174,7 +174,7 @@ public class DateUtils {
      * @param dateFormat 时间格式
      * @param interval 间隔天数
      * @return  任意间隔天数的时间，自定义格式
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-13
      */
     public static String getAnyDay(String dateFormat , int interval){
@@ -191,7 +191,7 @@ public class DateUtils {
      * @param smTime 较小的时间
      * @param bigTime 较大的时间
      * @return 两个时间天数差
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-19
      */
     public static int getTimeDiff(Date smTime , Date bigTime){
@@ -211,7 +211,7 @@ public class DateUtils {
      * @param bigTime 较大时间
      * @param dateFormat 时间格式
      * @return 两个时间天数差，自定义格式。
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-19
      */
     public static int getTimeDiffStr(String smTime , String bigTime , String dateFormat){
@@ -235,7 +235,7 @@ public class DateUtils {
      * @param smTime 较小时间精确到天
      * @param bigTime 较大时间精确到天
      * @return 两个时间的天数差
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-19
      */
     public static int getTimeDiffExactDay(String smTime , String bigTime){
@@ -247,7 +247,7 @@ public class DateUtils {
      * @param smTime 较小时间精确到秒
      * @param bigTime 较大时间精确到秒
      * @return 两个时间天数差
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-19
      */
     public static int getTimeDiffExactSec(String smTime , String bigTime){
@@ -259,7 +259,7 @@ public class DateUtils {
      * @param date 要转换的date型日期
      * @param dateFormat 日期格式
      * @return 转换后的字符型日期
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-24
      */
     public static String dateToStr(Date date , String dateFormat){

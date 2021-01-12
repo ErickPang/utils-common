@@ -26,7 +26,7 @@ import java.util.Map;
 
 /**
  * http请求工具类
- * @author pangshaoshan
+ * @author erick
  * @version : 1.0
  * @since  :2019-10-24
  */
@@ -40,7 +40,7 @@ public class HttpUtils {
      * @param connectTimeout 连接超时时间
      * @param readTimeout 读取超时时间
      * @return 返回接收到的数据
-     * @author : pangshaoshan
+     * @author : erick
      * @since  : 2019-10-24
      */
     public static String httpMethodByStream(String sendMsg , String accessUrl , String requestMthod ,
@@ -108,7 +108,7 @@ public class HttpUtils {
 
     /**
      * 采用httpclient方式以get方式进行请求
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-11-18
      * @param accessUrl 请求地址
      * @param jsonStr 发送数据格式为json

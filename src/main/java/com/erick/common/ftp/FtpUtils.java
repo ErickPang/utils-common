@@ -13,7 +13,7 @@ import java.io.*;
 
 /**
  * ftp工具类
- * @author pangshaoshan
+ * @author erick
  * @version 1.0
  * @since 2019-11-29
  */

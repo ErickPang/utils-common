@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 
 /**
 * json转换类
-* @author  pangshaoshan
+* @author  erick
 * @date   2020/4/22 5:46 下午
 *
 */
@@ -19,7 +19,7 @@ public class JsonParseUtils {
 
     /**
     * 将对象转为json字符串
-    * @author  pangshaoshan
+    * @author  erick
     * @date  2020/4/22 6:00 下午
     * @param object 传入对象
     * @return 转换后的字符串
@@ -42,7 +42,7 @@ public class JsonParseUtils {
     }
     /**
     * json转换为对象
-    * @author  pangshaoshan
+    * @author  erick
     * @date  2020/4/22 6:12 下午
     * @param json 待转换的字符串
     * @param clazz 对应的转换对象

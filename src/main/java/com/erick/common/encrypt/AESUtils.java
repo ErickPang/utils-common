@@ -14,7 +14,7 @@ import java.security.NoSuchAlgorithmException;
 
 /**
 * AES加解密工具类
-* @author  pangshaoshan
+* @author  erick
 * @date   2020/4/22 4:45 下午
 *
 */
@@ -34,7 +34,7 @@ public class AESUtils {
     }
     /**
     * 加密数据
-    * @author  pangshaoshan
+    * @author  erick
     * @date  2020/4/22 4:46 下午
     * @param data 加密数据
     * @param key 加密key
@@ -47,7 +47,7 @@ public class AESUtils {
 
     /**
     * @deprecated 解密数据
-    * @author  pangshaoshan
+    * @author  erick
     * @date  2020/4/22 4:48 下午
     * @param data 解密数据
     * @param key 密钥
@@ -60,7 +60,7 @@ public class AESUtils {
 
     /**
     * @deprecated 实际解密
-    * @author  pangshaoshan
+    * @author  erick
     * @date   2020/4/22 4:49 下午
     * @param data 解密数据
     * @param key 密钥

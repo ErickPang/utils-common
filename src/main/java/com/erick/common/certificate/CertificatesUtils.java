@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 /**
  * 证件相关工具类
- * @author pangshaoshan
+ * @author erick
  * @version 1.0
  * @since 2019-10-23
  */
@@ -529,7 +529,7 @@ public class CertificatesUtils {
      * 校验身份证号码合法性
      * @param identityNum 身份证号码
      * @return 是否合法，true : 合法，false : 不合法
-     * @author pangshaoshan
+     * @author erick
      * @since  : 2019-10-24
      */
     public static boolean checkIdentityNum(String identityNum){
@@ -566,7 +566,7 @@ public class CertificatesUtils {
     /***
      * 校验省份
      * @param identityNum 身份证号码
-     * @author pangshaoshan
+     * @author erick
      * @since  2019-10-23
      */
     private static boolean checkProvinceId(String identityNum){
@@ -583,7 +583,7 @@ public class CertificatesUtils {
      * 校验15位身份证号码
      * @param identityNum 身份证号码
      * @return 15位身份证号码合法性，true : 合法 ，false : 不合法
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-24
      */
     private static boolean validate15IdCard(String identityNum){
@@ -595,7 +595,7 @@ public class CertificatesUtils {
      * 校验18位身份证号码
      * @param identityNum 身份证号码
      * @return 18位身份证号码合法性，true : 合法 ，false : 不合法
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-24
      */
     private static boolean validate18IdCard(String identityNum){
@@ -625,7 +625,7 @@ public class CertificatesUtils {
      * 将和值与11取模得到余数进行校验码判断
      * @param sum17 前17位加权后的和
      * @return 校验码
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-24
      */
     private static String getCheckCodeBySum(int sum17) {
@@ -674,7 +674,7 @@ public class CertificatesUtils {
      *
      * @param idCard17Int 前17位的整数
      * @return 加权和值
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-24
      */
     private static int getPowerSum(int[] idCard17Int) {
@@ -698,7 +698,7 @@ public class CertificatesUtils {
      * @param idCardChar 前17位号码
      * @return 整型数组
      * @throws NumberFormatException 数组格式化异常
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-24
      */
     private static int[] converCharToInt(char[] idCardChar) throws NumberFormatException {
@@ -715,7 +715,7 @@ public class CertificatesUtils {
      * @param birthDay 生日日期
      * @param dateFormat 日期格式
      * @return 生日是否正确，true : 正确 , false : 错误
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-10-24
      */
     private static boolean checkBirthDay(String birthDay , String dateFormat){
@@ -734,7 +734,7 @@ public class CertificatesUtils {
      * 获取身份证号码中的出生日期
      * @param identityNum 身份证号码
      * @return 出生日期
-     * @author : pangshaoshan
+     * @author : erick
      * @since  : 2019-10-24
      */
     public static String getIdentityBirthDay(String identityNum){
@@ -759,7 +759,7 @@ public class CertificatesUtils {
 
     /**
      * 根据证件号码获取市级行政区域代码
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-11-17
      * @param identityNum 证件号码
      * @return 返回对应市级名称
@@ -782,7 +782,7 @@ public class CertificatesUtils {
 
     /**
      * 根据证件号码获取对应的省份
-     * @author pangshaoshan
+     * @author erick
      * @since 2019-11-17
      * @param identityNum 证件号码
      * @return 返回对应省份

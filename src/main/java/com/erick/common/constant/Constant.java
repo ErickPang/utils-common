@@ -2,7 +2,7 @@ package com.erick.common.constant;
 
 /**
  * 常量
- * @author pangshaoshan
+ * @author erick
  * @version : 1.0
  * @since  :2019-10-23
  */

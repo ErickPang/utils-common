@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * 基于java8的时间工具类
- * @author pangshaoshan
+ * @author erick
  * @version 1.0
  * @since 1.8+
  */
