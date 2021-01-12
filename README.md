@@ -2,7 +2,6 @@
 
 #### 介绍
 常用的工具方法，包括时间工具类,证件号码工具类,http请求工具类,ftp文件上传下载
-在线API文档：https://apidoc.gitee.com/erickwhx/utils-common
 
 #### 使用说明
 
