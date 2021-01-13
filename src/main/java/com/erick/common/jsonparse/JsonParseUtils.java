@@ -3,6 +3,7 @@ package com.erick.common.jsonparse;
 import com.erick.common.constant.Constant;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 
@@ -62,5 +63,19 @@ public class JsonParseUtils {
             throw new Exception("json转换为对象发生异常"+e);
         }
         return tmpT;
+    }
+    /**
+     * 获取对应节点的值
+     * @author  erick
+     * @date  2021/1/12  6:57 下午
+     * @param jsonStr 源json数据
+     * @param nodeName 节点名称
+     * @return 对应节点的值
+     *
+     */
+    public static String getString(String jsonStr , String nodeName) throws Exception{
+        ObjectMapper mapper=new ObjectMapper();
+        JsonNode jsonNode = mapper.readTree(jsonStr);
+        return jsonNode.findValue(nodeName).asText();
     }
 }

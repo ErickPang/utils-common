@@ -75,5 +75,7 @@
   将对象转换为Json
   * jsonToObj(String json,Class clazz)  
   将Json转换为对象
+  * getString(String jsonStr , String nodeName)
+  获取对应节点的值
 
 #### todo MD5加密、AES加解密、DES加解密、SFTP、https、唯一值生成
