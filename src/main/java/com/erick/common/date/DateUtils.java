@@ -1,6 +1,7 @@
 package com.erick.common.date;
 
 import com.erick.common.constant.Constant;
+import com.erick.common.constant.DateFormatConstant;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -25,7 +26,7 @@ public class DateUtils {
      * @since  : 2019-10-13
      */
     public static Date strToDateExactDay(String date){
-        return stringToDate(date, Constant.DATE_FORMAT_EXACTDAY);
+        return stringToDate(date, DateFormatConstant.DATE_FORMAT_EXACTDAY);
     }
 
     /***
@@ -36,7 +37,7 @@ public class DateUtils {
      * @since : 2019-10-13
      */
     public static Date strToDateExactSec(String date){
-        return stringToDate(date , Constant.DATE_FORMAT_EXACTSEC);
+        return stringToDate(date , DateFormatConstant.DATE_FORMAT_EXACTSEC);
     }
 
     /***
@@ -71,7 +72,7 @@ public class DateUtils {
      * @since 2019-10-13
      */
     public static String getCurrentYear(){
-        return getToday(Constant.DATE_FORMAT_YEAR);
+        return getToday(DateFormatConstant.DATE_FORMAT_YEAR);
     }
 
     /***
@@ -81,7 +82,7 @@ public class DateUtils {
      * @since 2019-10-13
      */
     public static String getCurrentMonth(){
-        return getToday(Constant.DATE_FORMAT_MONTH);
+        return getToday(DateFormatConstant.DATE_FORMAT_MONTH);
     }
 
     /***
@@ -91,7 +92,7 @@ public class DateUtils {
      * @since  2019-10-13
      */
     public static String getCurrentDay(){
-        return getToday(Constant.DATE_FORMAT_DAY);
+        return getToday(DateFormatConstant.DATE_FORMAT_DAY);
     }
 
     /***
@@ -101,7 +102,7 @@ public class DateUtils {
      * @since 2019-10-13
      */
     public static String getCurrentHour(){
-        return getToday(Constant.DATE_FORMAT_HOUR);
+        return getToday(DateFormatConstant.DATE_FORMAT_HOUR);
     }
 
     /***
@@ -111,7 +112,7 @@ public class DateUtils {
      * @since 2019-10-13
      */
     public static String getTodayExactMilliSecond(){
-        return getToday(Constant.DATE_FORMAT_EXACTMILLINSEC);
+        return getToday(DateFormatConstant.DATE_FORMAT_EXACTMILLINSEC);
     }
 
     /***
@@ -121,7 +122,7 @@ public class DateUtils {
      * @since 2019-10-13
      */
     public static String getTodayExactDayChar(){
-        return getToday(Constant.DATE_FORMAT_CHAR_EXACTDAY);
+        return getToday(DateFormatConstant.DATE_FORMAT_CHAR_EXACTDAY);
     }
 
     /***
@@ -131,7 +132,7 @@ public class DateUtils {
      * @since 2019-10-15
      */
     public static String getTodayExactSecChar(){
-        return getToday(Constant.DATE_FORMAT_CHAR_EXACTSEC);
+        return getToday(DateFormatConstant.DATE_FORMAT_CHAR_EXACTSEC);
     }
     /***
      * 获取当前时间
@@ -140,7 +141,7 @@ public class DateUtils {
      * @since 2019-10-13
      */
     public static String getTodyExactDay(){
-        return getToday(Constant.DATE_FORMAT_EXACTDAY);
+        return getToday(DateFormatConstant.DATE_FORMAT_EXACTDAY);
     }
 
     /***
@@ -150,7 +151,7 @@ public class DateUtils {
      * @since 2019-10-13
      */
     public static String getTodayExactSec(){
-        return getToday(Constant.DATE_FORMAT_EXACTSEC);
+        return getToday(DateFormatConstant.DATE_FORMAT_EXACTSEC);
     }
 
     /***
@@ -239,7 +240,7 @@ public class DateUtils {
      * @since 2019-10-19
      */
     public static int getTimeDiffExactDay(String smTime , String bigTime){
-        return getTimeDiffStr(smTime , bigTime , Constant.DATE_FORMAT_EXACTDAY);
+        return getTimeDiffStr(smTime , bigTime , DateFormatConstant.DATE_FORMAT_EXACTDAY);
     }
 
     /***
@@ -251,7 +252,7 @@ public class DateUtils {
      * @since 2019-10-19
      */
     public static int getTimeDiffExactSec(String smTime , String bigTime){
-        return getTimeDiffStr(smTime , bigTime , Constant.DATE_FORMAT_EXACTSEC);
+        return getTimeDiffStr(smTime , bigTime , DateFormatConstant.DATE_FORMAT_EXACTSEC);
     }
 
     /***

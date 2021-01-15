@@ -1,6 +1,8 @@
 package com.erick.common.certificate;
 
 import com.erick.common.constant.Constant;
+import com.erick.common.constant.DateFormatConstant;
+import com.erick.common.constant.NumberConstant;
 import com.erick.common.date.DateUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -541,8 +543,8 @@ public class CertificatesUtils {
          * 校验长度
          */
         identityNum = StringUtils.trim(identityNum);
-        if (identityNum.length() != Constant.IDENTITY_LEN_15
-                && identityNum.length() != Constant.IDENTITY_LEN_18){
+        if (identityNum.length() != NumberConstant.IDENTITY_LEN_15
+                && identityNum.length() != NumberConstant.IDENTITY_LEN_18){
             return false;
         }
         /**
@@ -557,7 +559,7 @@ public class CertificatesUtils {
         if (!checkProvinceId(identityNum)){
             return false;
         }
-        if (identityNum.length() == Constant.IDENTITY_LEN_15){
+        if (identityNum.length() == NumberConstant.IDENTITY_LEN_15){
             return validate15IdCard(identityNum);
         }
         return validate18IdCard(identityNum);
@@ -588,7 +590,7 @@ public class CertificatesUtils {
      */
     private static boolean validate15IdCard(String identityNum){
         String birthDay = identityNum.substring(6 , 12);
-        return checkBirthDay(birthDay , Constant.DATE_FORMAT_SIX);
+        return checkBirthDay(birthDay , DateFormatConstant.DATE_FORMAT_SIX);
     }
 
     /**
@@ -600,7 +602,7 @@ public class CertificatesUtils {
      */
     private static boolean validate18IdCard(String identityNum){
         String birthDay = identityNum.substring(6 , 14);
-        if (!checkBirthDay(birthDay , Constant.DATE_FORMAT_EIGHT)){
+        if (!checkBirthDay(birthDay , DateFormatConstant.DATE_FORMAT_EIGHT)){
             return false;
         }
 
@@ -741,11 +743,11 @@ public class CertificatesUtils {
         if (StringUtils.isEmpty(identityNum)){
             return "";
         }
-        if (Constant.IDENTITY_LEN_15 != identityNum.length()
-                && Constant.IDENTITY_LEN_18 != identityNum.length()){
+        if (NumberConstant.IDENTITY_LEN_15 != identityNum.length()
+                && NumberConstant.IDENTITY_LEN_18 != identityNum.length()){
             return "";
         }
-        if (Constant.IDENTITY_LEN_15 == identityNum.length()){
+        if (NumberConstant.IDENTITY_LEN_15 == identityNum.length()){
             String birthDayYear = "19" + identityNum.substring(6 , 8);
             String birthDayMonth = identityNum.substring(8 , 10);
             String birthDay = identityNum.substring(10 , 12);
@@ -769,8 +771,8 @@ public class CertificatesUtils {
             return "证件号码不能为空";
         }
         String areaCode = identityNum.substring(0 ,4);
-        if (areaCode.startsWith(Constant.AREACODE_PREFIX1101) || areaCode.startsWith(Constant.AREACODE_PREFIX1201) || areaCode.startsWith(Constant.AREACODE_PREFIX3101)
-            ||areaCode.startsWith(Constant.AREACODE_PREFIX5001) || areaCode.startsWith(Constant.AREACODE_PREFIX5002) || areaCode.startsWith(Constant.AREACODE_PREFIX6590)){
+        if (areaCode.startsWith(NumberConstant.AREACODE_PREFIX1101) || areaCode.startsWith(NumberConstant.AREACODE_PREFIX1201) || areaCode.startsWith(NumberConstant.AREACODE_PREFIX3101)
+            ||areaCode.startsWith(NumberConstant.AREACODE_PREFIX5001) || areaCode.startsWith(NumberConstant.AREACODE_PREFIX5002) || areaCode.startsWith(NumberConstant.AREACODE_PREFIX6590)){
             areaCode = identityNum.substring(0 , 6);
         }
         String areaName = areaCodeMap.get(areaCode);

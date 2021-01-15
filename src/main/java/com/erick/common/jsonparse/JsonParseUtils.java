@@ -1,6 +1,7 @@
 package com.erick.common.jsonparse;
 
 import com.erick.common.constant.Constant;
+import com.erick.common.constant.DateFormatConstant;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -33,7 +34,7 @@ public class JsonParseUtils {
         try {
             //忽略空值
             mapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
-            mapper.setDateFormat(new SimpleDateFormat(Constant.DATE_FORMAT_EXACTSEC));
+            mapper.setDateFormat(new SimpleDateFormat(DateFormatConstant.DATE_FORMAT_EXACTSEC));
             parseJson = mapper.writeValueAsString(object);
         } catch (Exception e) {
             e.printStackTrace();

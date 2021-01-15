@@ -1,6 +1,7 @@
 package com.erick.common.ftp;
 
 import com.erick.common.constant.Constant;
+import com.erick.common.constant.NumberConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -167,8 +168,8 @@ public class FtpUtils {
         }
         //切换目录失败，则说明目镜不存在，需要创建目录
         //获取第一层目录
-        int startNum = Constant.NUM_INT_0;
-        int endNum = Constant.NUM_INT_0;
+        int startNum = NumberConstant.NUM_INT_0;
+        int endNum = NumberConstant.NUM_INT_0;
         //若以"/"开始，则+1跳过/
         if (filePath.startsWith(Constant.CHAR_SLASH)){
             startNum = startNum + 1;

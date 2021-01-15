@@ -2,6 +2,7 @@ package com.erick.common.http;
 
 
 import com.erick.common.constant.Constant;
+import com.erick.common.constant.NumberConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -166,13 +167,13 @@ public class HttpUtils {
             throw new Exception("请求地址不能为空");
         }
         if (ObjectUtils.isEmpty(connectTimeout)){
-            connectTimeout = Constant.NUM_INT_5000;
+            connectTimeout = NumberConstant.NUM_INT_5000;
         }
         if (ObjectUtils.isEmpty(connectionRequestTimeout)){
-            connectionRequestTimeout = Constant.NUM_INT_5000;
+            connectionRequestTimeout = NumberConstant.NUM_INT_5000;
         }
         if (ObjectUtils.isEmpty(socketTimeout)){
-            socketTimeout = Constant.NUM_INT_5000;
+            socketTimeout = NumberConstant.NUM_INT_5000;
         }
         String resultStr = null;
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
@@ -189,7 +190,7 @@ public class HttpUtils {
         try {
             closeableHttpResponse = closeableHttpClient.execute(httpPost);
             //判断是否返回正确的状态码，若正常则获取返回数据
-            if (Constant.NUM_INT_200 == closeableHttpResponse.getStatusLine().getStatusCode()){
+            if (NumberConstant.NUM_INT_200 == closeableHttpResponse.getStatusLine().getStatusCode()){
                 HttpEntity httpEntity = closeableHttpResponse.getEntity();
                 //获取的数据为不为空则转换为字符串
                 if (ObjectUtils.isNotEmpty(httpEntity)){
@@ -220,7 +221,7 @@ public class HttpUtils {
      * @return 返回结果
      */
     public static String httpPostStrByDefaultTime(String accessUrl , String jsonStr) throws Exception{
-        return sendMsgByPostMethod(accessUrl , jsonStr , Constant.NUM_INT_5000 , Constant.NUM_INT_5000 , Constant.NUM_INT_5000);
+        return sendMsgByPostMethod(accessUrl , jsonStr , NumberConstant.NUM_INT_5000 , NumberConstant.NUM_INT_5000 , NumberConstant.NUM_INT_5000);
     }
 
     /**
@@ -230,6 +231,6 @@ public class HttpUtils {
      * @return 返回结果
      */
     public static String httpPostMapByDefaultTime(String accessUrl , Map<String , String> paraMap) throws Exception{
-        return sendMapMsgByPost(accessUrl , paraMap , Constant.NUM_INT_5000 ,Constant.NUM_INT_5000,Constant.NUM_INT_5000);
+        return sendMapMsgByPost(accessUrl , paraMap , NumberConstant.NUM_INT_5000 ,NumberConstant.NUM_INT_5000,NumberConstant.NUM_INT_5000);
     }
 }

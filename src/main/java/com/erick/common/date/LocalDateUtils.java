@@ -1,6 +1,7 @@
 package com.erick.common.date;
 
 import com.erick.common.constant.Constant;
+import com.erick.common.constant.DateFormatConstant;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -61,7 +62,7 @@ public class LocalDateUtils {
      * @return 当时时间
      */
     public static String getCurrentTimeExactSec(){
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(Constant.DATE_FORMAT_EXACTSEC);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DateFormatConstant.DATE_FORMAT_EXACTSEC);
         return LocalDateTime.now().format(dateTimeFormatter);
     }
 
@@ -75,7 +76,7 @@ public class LocalDateUtils {
      *
      */
     public static int betweenSecond(String startTime , String endTime){
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(Constant.DATE_FORMAT_EXACTSEC);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DateFormatConstant.DATE_FORMAT_EXACTSEC);
         LocalDateTime startDateTime = LocalDateTime.parse(startTime , dateTimeFormatter);
         LocalDateTime endDateTime = LocalDateTime.parse(endTime , dateTimeFormatter);
         return (int) Duration.between(startDateTime , endDateTime).toMillis()/(1000);
@@ -91,7 +92,7 @@ public class LocalDateUtils {
      *
      */
     public static int betweenTimeSecond(String startTime , String endTime){
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(Constant.DATE_FORMAT_EXACTTIME);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DateFormatConstant.DATE_FORMAT_EXACTTIME);
         LocalTime startDateTime = LocalTime.parse(startTime , dateTimeFormatter);
         LocalTime endDateTime = LocalTime.parse(endTime , dateTimeFormatter);
         return (int)Duration.between(startDateTime , endDateTime).toMillis()/1000;
@@ -109,7 +110,7 @@ public class LocalDateUtils {
     public static int parseSecondLocalDateByTime(String time){
         int resultSecond = 0;
         try {
-            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(Constant.DATE_FORMAT_EXACTTIME);
+            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DateFormatConstant.DATE_FORMAT_EXACTTIME);
             LocalTime localTime = LocalTime.parse(time , dateTimeFormatter);
             int temHour = localTime.getHour();
             int temMinuts = localTime.getMinute();
